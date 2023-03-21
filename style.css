@@ -41,3 +41,37 @@ header a {
   font-size: 1.25rem;
   letter-spacing: .15rem;
 }
+
+/* Hero section: */
+.hero a {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  
+  height: 500px;
+  background-image: url(img/article-image-hero.png);
+  background-size: cover;
+  padding: 0 50px;
+}
+
+.hero a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero h2 {
+  font-size: 4rem;
+}
+
+.hero p {
+  padding: 10px 0;
+  font-size: 1.5rem;
+}
+
+.hero time {
+  order: -1;
+  padding-top: 130px;
+  font-size: 1.25rem;
+}

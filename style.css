@@ -95,10 +95,29 @@ footer p:first-of-type{
   font-weight: bold;
 }
 
-.recent-posts h2 {
+main h2 {
   text-align: center;
 }
 
+main {
+  margin: 0 20px;
+}
+
+main h2, main h3 {
+  margin: 10px 0;
+}
+
+main h2 {
+  font-size: 2rem;
+}
+
+main p {
+  margin: 10px 0;
+}
+
+main img {
+  width: 100%;
+}
 
 /* *** END OF GENERAL STYLING *** */
 
@@ -139,29 +158,6 @@ footer p:first-of-type{
 
 /* *** END OF HOME PAGE STYLING *** */
 
-/*  *** START OF MAIN POST STYLING *** */
-
-main {
-  margin: 20px;
-}
-
-main h2, main h3 {
-  margin: 10px 0;
-}
-
-main h2 {
-  font-size: 2rem;
-}
-
-main p {
-  margin-bottom: 10px;
-}
-
-main img {
-  width: 100%;
-}
-
-/* *** END OF MAIN POST STYLING *** */
 
 /* *** START OF ABOUT ME STYLING *** */
 
@@ -170,59 +166,111 @@ main img {
   width: 200px;
 }
 
+.about-me {
+  margin: 0 100px;
+}
+
 /* *** END OF ABOUT ME STYLING *** */
 
 /* Media Queries */
-@media (min-width: 500px){
+@media (min-width: 550px){
+ /* *** GENERAL STYLINGS ***  */
+
+  body {
+    background-color: whitesmoke;
+  }
+  
   /* HEADER */
 
   header {
     padding: 0 50px;
+    background-color: white;
   }
 
-.logo {
-  width: 400px;
-  justify-content: space-evenly;
-}
+  .logo {
+    font-size: 1rem;
+    width: 400px;
+    justify-content: space-evenly;
+  }
 
-.logo img {
-  width: 40px;  
-}
+  .logo img {
+    width: 40px;  
+  }
 
-header ul li {
-  padding: 0 20px;
-}
+  header ul li {
+    padding: 0 20px;
+  }
 
-header a {
-  font-weight: bolder;
-  font-size: 1.25rem;
-  letter-spacing: .15rem;
-}
+  header a {
+    font-weight: bolder;
+    font-size: 1.25rem;
+    letter-spacing: .15rem;
+  }
 
 /* Hero section: */
 
-.hero {
-  padding: 0 50px;
-}
+  .hero {
+    padding: 0 50px;
+    height: 30%;
+  }
 
-.hero h2 {
-  font-size: 4rem;
-}
+  .hero h2 {
+    font-size: 3em;
+  }
 
-.hero p {
-  padding: 10px 0;
-  font-size: 1.5rem;
-}
+  .hero p {
+    padding: 10px 0;
+    font-size: 1.5em;
+  }
 
-.hero time {
-  font-size: 1.25rem;
-}
+  .hero time {
+    font-size: 1.25rem;
+  }
 
 /* Blog post cards */
 
-.post-card {
-  border: solid red 2px;
-  width: 40em;
-  margin: 0 auto;
+.card-container,
+.recent-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
+
+.post-card {
+    max-width: 20em;
+    margin: 0 auto;
+  }
+
+  .post-card img {
+    width: 100%;
+  }
+
+  /* Hero post page */
+
+  main {
+    margin-top: 50px;
+  }
+
+  main h2 {
+    margin: 25px;
+  }
+
+  .blog-post {
+    width: 55em;
+    margin: 0 auto;
+  }
+
+  .blog-post h2,
+  .blog-post h3,
+  .blog-post p,
+  .blog-post time {
+    padding: 0 50px;
+  }
+
+  .blog-post img {
+    height: auto;
+    max-width: 100%;
+  }
+
+
 }

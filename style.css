@@ -71,12 +71,56 @@ header a {
 
 /* Blog Post Cards */
 
-.post-card {
-  border: solid red 2px;
-  width: 100vw;
-  margin: 0 auto;
+.post-card a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
 }
 
+.post-card {
+  width: 100vw;
+  padding: 20px;
+}
+
+.post-card img {
+  width: 100%;
+  border-radius: .5em;
+  order: 1;
+}
+
+.post-card time {
+  order: 2;
+  margin-top: 10px;
+}
+
+.post-card h2 {
+  margin: 5px;
+  order: 3;
+}
+
+.post-card p {
+  order: 4;
+}
+
+/* View more */
+.view-more {
+  width: 100px;
+  margin: 50px auto;
+}
+/* Footer */
+
+footer {
+  border: solid red 2px;
+  background-color: #202020;
+  color: whitesmoke;
+  text-align: center;
+  padding: 50px;
+}
+
+footer p:first-of-type{
+  font-weight: bold;
+}
 
 /* Media Queries */
 @media (min-width: 500px){

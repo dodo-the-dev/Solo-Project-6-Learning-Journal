@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: whitesmoke;
+}
 
 /* *** START OF GENERAL STYLES *** */
 /* Header */
@@ -14,6 +17,7 @@ header, .logo {
 }
 
 header {
+  background-color: white;
   justify-content: space-between;
   align-items: center;
   height: 100px;
@@ -33,7 +37,7 @@ header {
 }
 
 header ul li {
-  display: inline;
+  display: inline-block;
   padding: 0 5px;
 }
 
@@ -41,6 +45,33 @@ header a {
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+
+
+/* Main content */
+
+main h2 {
+  text-align: center;
+}
+
+main {
+  margin: 0 20px;
+}
+
+main h2, main h3 {
+  margin: 10px 0;
+}
+
+main h2 {
+  font-size: 2rem;
+}
+
+main p {
+  margin: 10px 0;
+}
+
+main img {
+  width: 100%;
 }
 
 /* Blog Post Cards */
@@ -95,30 +126,6 @@ footer p:first-of-type{
   font-weight: bold;
 }
 
-main h2 {
-  text-align: center;
-}
-
-main {
-  margin: 0 20px;
-}
-
-main h2, main h3 {
-  margin: 10px 0;
-}
-
-main h2 {
-  font-size: 2rem;
-}
-
-main p {
-  margin: 10px 0;
-}
-
-main img {
-  width: 100%;
-}
-
 /* *** END OF GENERAL STYLING *** */
 
 /*  *** START OF HOME PAGE STYLING *** */
@@ -164,10 +171,7 @@ main img {
 .profile-photo {
   border-radius: 50%;
   width: 200px;
-}
-
-.about-me {
-  margin: 0 100px;
+  margin: 0 auto;
 }
 
 /* *** END OF ABOUT ME STYLING *** */
@@ -207,9 +211,11 @@ main img {
     letter-spacing: .15rem;
   }
 
+
 /* Hero section: */
 
   .hero {
+    min-height: 500px;
     padding: 0 50px;
     height: 30%;
   }
@@ -232,8 +238,7 @@ main img {
 .card-container,
 .recent-posts {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
 }
 
 .post-card {
@@ -256,7 +261,7 @@ main img {
   }
 
   .blog-post {
-    width: 55em;
+    max-width: 55em;
     margin: 0 auto;
   }
 
@@ -272,5 +277,22 @@ main img {
     max-width: 100%;
   }
 
+  /* About me page */
 
+  .about-me {
+    margin: 0 100px;
+  }
+  
+  .header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .header-container p {
+    grid-column: 1 / -1;
+  }
+  
+  .header-container h1 {
+    font-size: 2em;
+  }
 }
